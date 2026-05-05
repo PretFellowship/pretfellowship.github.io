@@ -58,6 +58,21 @@
   border-color: #3498db;
 }
 
+.suggest-btn {
+  margin-left: auto;
+  background: #2ecc71;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.suggest-btn:hover {
+  background: #28b765;
+}
+
 .main-content {
   flex: 1;
   max-width: 1200px;

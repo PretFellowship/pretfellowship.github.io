@@ -3,10 +3,12 @@ import { useQuery } from '@tanstack/react-query'
 import EventListView from './views/EventListView'
 import CalendarView from './views/CalendarView'
 import MapView from './views/MapView'
+import SuggestEventForm from './components/SuggestEventForm'
 import './App.css'
 
 function App() {
   const [activeView, setActiveView] = useState('list')
+  const [isSuggestOpen, setIsSuggestOpen] = useState(false)
   const [filters, setFilters] = useState({
     locationType: 'all',
     tags: [],
@@ -100,6 +102,9 @@ function App() {
         >
           🗺️ Map
         </button>
+        <button className="suggest-btn" onClick={() => setIsSuggestOpen(true)}>
+          ✉️ Suggest Event
+        </button>
       </nav>
 
       <main className="main-content">
@@ -133,6 +138,8 @@ function App() {
           </a>
         </p>
       </footer>
+
+      {isSuggestOpen && <SuggestEventForm onClose={() => setIsSuggestOpen(false)} />}
     </div>
   )
 }
