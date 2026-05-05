@@ -39,7 +39,7 @@ function MapView({ events }) {
                 <h4>{event.title}</h4>
                 <p>{event.locationText}</p>
                 <p className="event-date">
-                  {new Date(event.startDate).toLocaleDateString()}
+                  {event.startDate ? new Date(event.startDate).toLocaleDateString() : 'No date'}
                 </p>
                 {event.url && (
                   <a href={event.url} target="_blank" rel="noopener noreferrer">

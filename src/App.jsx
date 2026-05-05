@@ -43,7 +43,9 @@ function App() {
 
     // Date range filter
     if (filters.startDate || filters.endDate) {
+      if (!event.startDate) return false // exclude events with no date if date filters are applied
       const eventStart = new Date(event.startDate)
+      if (isNaN(eventStart.getTime())) return false // invalid date
       if (filters.startDate && eventStart < new Date(filters.startDate)) return false
       if (filters.endDate && eventStart > new Date(filters.endDate)) return false
     }

@@ -2,7 +2,9 @@ import './EventCard.css'
 
 function EventCard({ event }) {
   const formatDate = (dateString) => {
+    if (!dateString) return 'No date'
     const date = new Date(dateString)
+    if (isNaN(date.getTime())) return 'No date'
     return date.toLocaleDateString('en-US', {
       weekday: 'short',
       month: 'short',
@@ -12,7 +14,9 @@ function EventCard({ event }) {
   }
 
   const formatTime = (dateString) => {
+    if (!dateString) return ''
     const date = new Date(dateString)
+    if (isNaN(date.getTime())) return ''
     return date.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',

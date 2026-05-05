@@ -9,8 +9,14 @@ function EventListView({ events, allTags, filters, onFilterChange }) {
   const sortedEvents = [...events].sort((a, b) => {
     switch (sortBy) {
       case 'date-asc':
+        if (!a.startDate && !b.startDate) return 0
+        if (!a.startDate) return 1 // null dates at end
+        if (!b.startDate) return -1
         return new Date(a.startDate) - new Date(b.startDate)
       case 'date-desc':
+        if (!a.startDate && !b.startDate) return 0
+        if (!a.startDate) return 1 // null dates at end
+        if (!b.startDate) return -1
         return new Date(b.startDate) - new Date(a.startDate)
       case 'title':
         return a.title.localeCompare(b.title)

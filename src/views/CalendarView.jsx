@@ -15,18 +15,20 @@ function CalendarView({ events }) {
     }
   }, [])
 
-  const calendarEvents = events.map((event) => ({
-    id: event.id,
-    title: event.title,
-    start: event.startDate,
-    end: event.endDate || event.startDate,
-    extendedProps: {
-      locationType: event.locationType,
-      locationText: event.locationText,
-      url: event.url,
-      tags: event.tags,
-    },
-  }))
+  const calendarEvents = events
+    .filter((event) => event.startDate) // only include events with startDate
+    .map((event) => ({
+      id: event.id,
+      title: event.title,
+      start: event.startDate,
+      end: event.endDate || event.startDate,
+      extendedProps: {
+        locationType: event.locationType,
+        locationText: event.locationText,
+        url: event.url,
+        tags: event.tags,
+      },
+    }))
 
   const handleEventClick = (info) => {
     const { url } = info.event.extendedProps
