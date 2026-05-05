@@ -121,6 +121,27 @@
   text-decoration: underline;
 }
 
+.calendar-button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-button:hover {
+  background: #2980b9;
+}
+
 @media (max-width: 600px) {
   .event-card {
     padding: 1rem;

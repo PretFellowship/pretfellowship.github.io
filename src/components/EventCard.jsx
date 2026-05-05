@@ -37,6 +37,38 @@ function EventCard({ event }) {
     }
   }
 
+  const formatDateForICS = (dateString) => {
+    if (!dateString) return ''
+    const date = new Date(dateString)
+    if (isNaN(date.getTime())) return ''
+    return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z'
+  }
+
+  const addToCalendar = () => {
+    const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Preterist Fellowship//Event Calendar//EN
+BEGIN:VEVENT
+UID:${event.id}@preteristfellowship.org
+DTSTAMP:${formatDateForICS(new Date())}
+DTSTART:${formatDateForICS(event.startDate)}
+${event.endDate ? `DTEND:${formatDateForICS(event.endDate)}` : ''}
+SUMMARY:${event.title.replace(/[,;]/g, '\\$&')}
+DESCRIPTION:${(event.description || '').replace(/[,;]/g, '\\$&')}
+LOCATION:${(event.locationText || '').replace(/[,;]/g, '\\$&')}
+${event.url ? `URL:${event.url}` : ''}
+END:VEVENT
+END:VCALENDAR`
+
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' })
+    const link = document.createElement('a')
+    link.href = URL.createObjectURL(blob)
+    link.download = `${event.title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.ics`
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <div className={`event-card ${event.featured ? 'featured' : ''}`}>
       {event.featured && <div className="featured-badge">⭐ Featured</div>}
@@ -88,6 +120,10 @@ function EventCard({ event }) {
           View Event →
         </a>
       )}
+
+      <button onClick={addToCalendar} className="calendar-button">
+        📅
+      </button>
     </div>
   )
 }
