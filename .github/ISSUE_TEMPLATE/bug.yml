@@ -1,0 +1,95 @@
+name: Bug Report
+description: Report a problem with the website
+title: "[Bug]: "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+        Please fill out the details below so we can reproduce and fix the issue.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Short description of the bug
+      placeholder: "Page crashes when loading events"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: What did you do to trigger the bug?
+      placeholder: |
+        1. Go to homepage
+        2. Click on event
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      placeholder: "Event details should display correctly"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      placeholder: "Page goes blank / shows error"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: Where did this happen?
+      placeholder: "https://your-site.com/events"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How serious is the issue?
+      options:
+        - low
+        - medium
+        - high
+        - critical
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: "Chrome, Safari, Firefox"
+    validations:
+      required: false
+
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      placeholder: "Desktop, iPhone 13, Android"
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Logs
+      description: Paste screenshots, error messages, or console logs
+      placeholder: "Paste any helpful details here"
+    validations:
+      required: false
