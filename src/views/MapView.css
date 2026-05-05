@@ -53,3 +53,33 @@
     width: 200px;
   }
 }
+
+@media (max-width: 480px) {
+  .map-view {
+    height: 300px;
+  }
+
+  .map-view-empty {
+    padding: 1.5rem 1rem;
+  }
+
+  .popup-content {
+    width: 180px;
+    font-size: 0.9rem;
+  }
+
+  .popup-content h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .popup-content p {
+    font-size: 0.8rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .popup-content a {
+    font-size: 0.85rem;
+    padding: 0.375rem 0.625rem;
+  }
+}

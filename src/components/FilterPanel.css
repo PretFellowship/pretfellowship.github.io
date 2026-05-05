@@ -120,3 +120,68 @@
     margin-bottom: 1.5rem;
   }
 }
+
+@media (max-width: 600px) {
+  .filter-panel {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .filter-header {
+    margin-bottom: 1rem;
+  }
+
+  .filter-header h3 {
+    font-size: 1rem;
+  }
+
+  .reset-btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8rem;
+    min-height: 36px;
+  }
+
+  .filter-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .filter-title {
+    padding: 0.625rem 0;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+
+  .filter-content {
+    padding: 0.5rem 0.25rem 0;
+  }
+
+  .filter-option {
+    padding: 0.375rem 0;
+  }
+
+  .filter-option input {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+  }
+
+  .search-input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-panel {
+    padding: 0.875rem;
+  }
+
+  .filter-title {
+    font-size: 0.85rem;
+  }
+
+  .filter-option {
+    font-size: 0.9rem;
+  }
+}
