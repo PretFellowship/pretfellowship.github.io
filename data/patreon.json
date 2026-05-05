@@ -1,0 +1,21 @@
+[{
+        "id": "zach-davis-patreon-lives",
+        "title": "Zach Davis Patreon Live Sessions",
+        "description": "Recurring live streams and member Q&A on Patreon covering preterist theology, often with guests like Tim Martin. Public YouTube videos supplement with introductions to preterism and responses to common objections.",
+        "startDate": "2026-05-10T00:00:00Z",
+        "endDate": "2026-05-10T02:00:00Z",
+        "recurrence": "irregular_patreon_sundays",
+        "locationType": "online",
+        "locationText": "Online via Patreon/YouTube",
+        "url": "https://www.patreon.com/cw/ZachDavis",
+        "tags": [
+            "Live Stream",
+            "Patreon",
+            "YouTube",
+            "Preterism Intro",
+            "Zach Davis",
+            "Tim Martin"
+        ],
+        "featured": true,
+        "createdAt": "2026-01-01T00:00:00Z"
+    }]

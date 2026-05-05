@@ -1,0 +1,162 @@
+[
+    {
+        "id": "all-things-fulfilled-william-bell",
+        "title": "All Things Fulfilled with William Bell",
+        "description": "Weekly (or near-weekly) teachings and broadcasts on fulfilled Bible prophecy, resurrection, and covenant themes. Classic radio-style program now primarily on YouTube with deep dives into preterist eschatology.",
+        "startDate": null,
+        "endDate": null,
+        "releaseDate": null,
+        "recurrence": "ongoing_weekly",
+        "locationType": "online",
+        "locationText": "YouTube / AllThingsFulfilled.com",
+        "url": "https://www.youtube.com/allthingsfulfilled",
+        "tags": [
+            "Podcast",
+            "Weekly",
+            "Fulfilled Prophecy",
+            "William Bell",
+            "Full Preterism"
+        ],
+        "featured": true,
+        "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+        "id": "burros-of-berea-rick-welch",
+        "title": "The Burros of Berea Podcast",
+        "description": "Conversational podcast hosted by Rick Welch with frequent full preterist guests (David Curtis, Bob Cruickshank, Mike Sullivan, Gary DeMar, etc.). Roundtables on preterist worldview, society, and eschatology.",
+        "startDate": null,
+        "endDate": null,
+        "releaseDate": "2021-01-01T00:00:00Z",
+        "recurrence": "ongoing_episodic",
+        "locationType": "online",
+        "locationText": "Apple Podcasts / RSS.com / YouTube",
+        "url": "https://podcasts.apple.com/us/podcast/the-burros-of-berea-podcast/id1588605731",
+        "tags": [
+            "Podcast",
+            "Conversational",
+            "Roundtable",
+            "Rick Welch",
+            "Full Preterism"
+        ],
+        "featured": true,
+        "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+        "id": "preterist-power-hour",
+        "title": "Preterist Power Hour",
+        "description": "Recurring discussions and interviews hosted under the Power of Preterism Network featuring Rick Welch, Michael Miano, Zach Davis, and others. Covers advancing preterist theology and responses to critics.",
+        "startDate": null,
+        "endDate": null,
+        "releaseDate": null,
+        "recurrence": "periodic",
+        "locationType": "online",
+        "locationText": "YouTube",
+        "url": "https: //www.youtube.com/@thepowerofpreterismnetwork6385",
+        "tags": [
+            "Podcast",
+            "Discussions",
+            "Rick Welch",
+            "Michael Miano",
+            "Zach Davis"
+        ],
+        "featured": true,
+        "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+        "id": "don-preston-morning-musings",
+        "title": "Morning Musings with Don K. Preston",
+        "description": "Regular YouTube video series / musings responding to critics, teaching on Revelation, and preterist topics. Often functions as a live or recorded podcast-style format.",
+        "startDate": null,
+        "endDate": null,
+        "releaseDate": null,
+        "recurrence": "ongoing",
+        "locationType": "online",
+        "locationText": "YouTube (MrDonPreston)",
+        "url": "https://www.youtube.com/channel/UCCMCzZrSxKb9GRwWFW3i0kA",
+        "tags": [
+            "Video Podcast",
+            "Responses",
+            "Don Preston",
+            "Full Preterism"
+        ],
+        "featured": true,
+        "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+        "id": "zach-davis-preterism-content",
+        "title": "Zach Davis Preterism Teachings & Patreon",
+        "description": "YouTube videos, introductions to preterism, and exclusive Patreon live sessions/discussions (often with Tim Martin). Strong educational focus on fulfilled eschatology.",
+        "startDate": null,
+        "endDate": null,
+        "releaseDate": null,
+        "recurrence": "ongoing_irregular",
+        "locationType": "online",
+        "locationText": "YouTube / Patreon",
+        "url": "https://www.youtube.com/@zachdavis3882",
+        "tags": [
+            "YouTube Series",
+            "Patreon Lives",
+            "Zach Davis",
+            "Tim Martin"
+        ],
+        "featured": false,
+        "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+        "id": "gary-demar-american-vision",
+        "title": "The Gary DeMar Podcast / Bible Prophecy Under the Microscope",
+        "description": "Ongoing podcast and video content from American Vision addressing preterism, partial-to-full views, and prophecy. Includes responses to futurist critiques.",
+        "startDate": null,
+        "endDate": null,
+        "releaseDate": null,
+        "recurrence": "ongoing",
+        "locationType": "online",
+        "locationText": "AmericanVision.org / YouTube",
+        "url": "https://garydemar.libsyn.com/",
+        "tags": [
+            "Podcast",
+            "Eschatology",
+            "Gary DeMar"
+        ],
+        "featured": false,
+        "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+        "id": "mike-sullivan-fullpreterism",
+        "title": "Mike Sullivan Full Preterist Discussions",
+        "description": "Appearances on podcasts (Burros of Berea, debates) and content from fullpreterism.com focusing on consistent preterism, Armageddon, and House Divided themes.",
+        "startDate": null,
+        "endDate": null,
+        "releaseDate": null,
+        "recurrence": "guest_episodes",
+        "locationType": "online",
+        "locationText": "Various platforms",
+        "url": "https://fullpreterism.com/",
+        "tags": [
+            "Discussions",
+            "Debates",
+            "Mike Sullivan"
+        ],
+        "featured": false,
+        "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+        "id": "tim-martin-covenant-creation",
+        "title": "Covenant Creation Conversations with Tim Martin",
+        "description": "Interviews and sessions linking Genesis to fulfilled eschatology. Featured in conferences and collaborative podcasts.",
+        "startDate": null,
+        "endDate": null,
+        "releaseDate": null,
+        "recurrence": "irregular",
+        "locationType": "online",
+        "locationText": "YouTube / Beyond Creation Science",
+        "url": "https: //www.youtube.com/channel/UCsGJCi5TP3EEd6jUbrJCdJA",
+        "tags": [
+            "Discussions",
+            "Covenant Creation",
+            "Tim Martin"
+        ],
+        "featured": false,
+        "createdAt": "2026-01-01T00:00:00Z"
+    }
+]

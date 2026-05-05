@@ -31,8 +31,27 @@ jobs:
       - name: Build
         run: |
           npm run build
+
           mkdir -p dist/data
-          cp -r data/*.json dist/data/
+
+          # merge all JSON files into one array
+          node -e "
+            const fs = require('fs');
+            const path = require('path');
+
+            const dir = path.join(process.cwd(), 'data');
+            const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
+
+            const merged = files.flatMap(file => {
+              const content = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf-8'));
+              return Array.isArray(content) ? content : [content];
+            });
+
+            fs.writeFileSync(
+              path.join(process.cwd(), 'dist/data/events.json'),
+              JSON.stringify(merged, null, 2)
+            );
+          "
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

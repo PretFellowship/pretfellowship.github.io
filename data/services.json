@@ -1,0 +1,25 @@
+[
+    {
+        "id": "berean-sunday-worship-study",
+        "title": "Berean Bible Church Sunday Services & Studies",
+        "description": "Ongoing full preterist teachings by David Curtis and guests (including past appearances by William Bell, Bob Cruikshank, Rick Welch). Annual Spring Conference and archived sermon series on fulfilled eschatology.",
+        "startDate": "2026-05-03T15:00:00Z",
+        "endDate": "2026-05-03T17:00:00Z",
+        "recurrence": "weekly_sunday",
+        "locationType": "hybrid",
+        "locationText": "Chesapeake, Virginia / Online",
+        "latitude": 36.7682,
+        "longitude": -76.2875,
+        "url": "https://www.bereanbiblechurch.org/",
+        "tags": [
+            "Sunday Service",
+            "Bible Study",
+            "Conference",
+            "David Curtis",
+            "William Bell",
+            "Bob Cruikshank"
+        ],
+        "featured": false,
+        "createdAt": "2026-01-01T00:00:00Z"
+    }
+]

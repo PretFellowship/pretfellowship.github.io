@@ -1,0 +1,23 @@
+[{
+        "id": "blue-point-wednesday-bible-study",
+        "title": "Blue Point Bible Church Wednesday Night Bible Study",
+        "description": "Weekly in-person and online Bible study/praise/prayer with strong full preterist focus. Pastor Mike Miano often features or discusses teachings aligned with preterist leaders like Don Preston and others.",
+        "startDate": "2026-05-06T23:00:00Z",
+        "endDate": "2026-05-06T00:30:00Z",
+        "recurrence": "weekly_wednesday",
+        "locationType": "hybrid",
+        "locationText": "Blue Point, New York / Online",
+        "latitude": 40.7570,
+        "longitude": -73.0340,
+        "url": "https://www.bluepointbiblechurch.org/",
+        "tags": [
+            "Bible Study",
+            "Weekly",
+            "Hybrid",
+            "Full Preterism",
+            "Mike Miano"
+        ],
+        "featured": false,
+        "createdAt": "2026-01-01T00:00:00Z"
+    }
+]
