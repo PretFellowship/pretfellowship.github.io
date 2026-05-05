@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/preterist-event.schema.json",
+  "title": "Preterist Event",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "description",
+    "startDate",
+    "endDate",
+    "locationType",
+    "locationText",
+    "tags",
+    "featured",
+    "createdAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique slug-style identifier for the event"
+    },
+    "title": {
+      "type": "string",
+      "description": "Human-readable event title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the event"
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event start time in ISO 8601 format"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event end time in ISO 8601 format"
+    },
+    "locationType": {
+      "type": "string",
+      "enum": ["in_person", "online", "hybrid", "historical"],
+      "description": "Type of event location"
+    },
+    "locationText": {
+      "type": "string",
+      "description": "Human-readable location description"
+    },
+    "latitude": {
+      "type": "number",
+      "minimum": -90,
+      "maximum": 90,
+      "description": "Latitude coordinate (required for in-person or hybrid events)",
+      "nullable": true
+    },
+    "longitude": {
+      "type": "number",
+      "minimum": -180,
+      "maximum": 180,
+      "description": "Longitude coordinate (required for in-person or hybrid events)",
+      "nullable": true
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "External link for registration or info",
+      "nullable": true
+    },
+    "tags": {
+      "type": "array",
+      "description": "Categorization tags for filtering and search",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "featured": {
+      "type": "boolean",
+      "description": "Whether this event should be highlighted in UI"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when this record was created"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "locationType": {
+            "enum": ["in_person", "hybrid"]
+          }
+        }
+      },
+      "then": {
+        "required": ["latitude", "longitude"]
+      }
+    }
+  ],
+  "additionalProperties": false
+}
