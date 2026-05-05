@@ -1,0 +1,37 @@
+name: Build Events JSON
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate submitted.json from issues
+        run: node scripts/build-events.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit updated submitted.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add dist/submitted.json
+
+          git commit -m "Update submitted.json from issues" || echo "No changes"
+
+          git push
