@@ -1,0 +1,55 @@
+.calendar-view {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-view :global(.fc) {
+  font-family: inherit;
+}
+
+.calendar-view :global(.fc-button-primary) {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.calendar-view :global(.fc-button-primary:hover) {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.calendar-view :global(.fc-button-primary.fc-button-active) {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.calendar-view :global(.fc-daygrid-day:hover) {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.calendar-view :global(.fc-event) {
+  cursor: pointer;
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.calendar-view :global(.fc-event:hover) {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .calendar-view {
+    padding: 1rem;
+  }
+
+  .calendar-view :global(.fc-toolbar) {
+    flex-direction: column;
+  }
+
+  .calendar-view :global(.fc-toolbar-chunk) {
+    margin-bottom: 0.5rem;
+  }
+}
