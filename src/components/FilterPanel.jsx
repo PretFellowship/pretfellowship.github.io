@@ -3,10 +3,10 @@ import './FilterPanel.css'
 
 function FilterPanel({ filters, allTags, onFilterChange }) {
   const [expandedFilters, setExpandedFilters] = useState({
-    locationType: true,
+    locationType: false,
     dateRange: false,
     tags: false,
-    search: true,
+    search: false,
   })
 
   const toggleFilter = (filterName) => {
