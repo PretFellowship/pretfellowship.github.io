@@ -36,7 +36,7 @@
             "Bible Study",
             "Fulfilled Eschatology"
         ],
-        "featured": true,
+        "featured": false,
         "createdAt": "2025-10-01T00:00:00Z"
     },
     {
@@ -176,7 +176,7 @@
             "Full Preterism",
             "Mike Miano"
         ],
-        "featured": true,
+        "featured": false,
         "createdAt": "2026-01-01T00:00:00Z"
     },
     {
@@ -197,7 +197,7 @@
             "Zach Davis",
             "Tim Martin"
         ],
-        "featured": true,
+        "featured": false,
         "createdAt": "2026-01-01T00:00:00Z"
     },
     {
@@ -220,7 +220,7 @@
             "William Bell",
             "Bob Cruikshank"
         ],
-        "featured": true,
+        "featured": false,
         "createdAt": "2026-01-01T00:00:00Z"
     },
     {
