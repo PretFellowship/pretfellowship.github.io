@@ -17,7 +17,7 @@
             "William Bell",
             "Full Preterism"
         ],
-        "featured": true,
+        "featured": false,
         "createdAt": "2026-01-01T00:00:00Z"
     },
     {
@@ -38,7 +38,7 @@
             "Rick Welch",
             "Full Preterism"
         ],
-        "featured": true,
+        "featured": false,
         "createdAt": "2026-01-01T00:00:00Z"
     },
     {
@@ -59,7 +59,7 @@
             "Michael Miano",
             "Zach Davis"
         ],
-        "featured": true,
+        "featured": false,
         "createdAt": "2026-01-01T00:00:00Z"
     },
     {
@@ -79,7 +79,7 @@
             "Don Preston",
             "Full Preterism"
         ],
-        "featured": true,
+        "featured": false,
         "createdAt": "2026-01-01T00:00:00Z"
     },
     {
