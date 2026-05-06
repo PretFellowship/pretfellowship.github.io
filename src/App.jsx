@@ -76,8 +76,8 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-content">
-          <h1>Preterist Events</h1>
-          <p className="subtitle">Full Preterist Eschatology Community Gatherings</p>
+          <h1>Full Preterist Events</h1>
+          <p className="subtitle">A collection of events "...that must soon take place"</p>
         </div>
       </header>
 
