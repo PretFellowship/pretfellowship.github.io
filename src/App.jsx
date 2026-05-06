@@ -88,9 +88,8 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-content">
-          <div className="header-kicker">Pret Fellowship Event Hub</div>
-          <h1>Discover full preterist events with less noise.</h1>
-          <p className="subtitle">A calm, scannable guide to gatherings, studies, conferences, and online meetups.</p>
+          <h1>Full Preterist Fellowship</h1>
+          <p className="subtitle">Events, gatherings, and resources for “the things that must soon take place.” (Rev. 1:1)</p>
         </div>
       </header>
 
