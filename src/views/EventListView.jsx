@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import EventCard from '../components/EventCard'
-import FilterPanel from '../components/FilterPanel'
 import './EventListView.css'
 
-function EventListView({ events, allTags, filters, onFilterChange }) {
+function EventListView({ events }) {
   const [sortBy, setSortBy] = useState('date-asc')
 
   const sortedEvents = [...events].sort((a, b) => {
@@ -30,7 +29,7 @@ function EventListView({ events, allTags, filters, onFilterChange }) {
   return (
     <div className="event-list-view">
       <div className="list-header">
-        <h2>Events</h2>
+        <p className="list-summary">Scan upcoming events as cards, sorted by what matters right now.</p>
         <div className="sort-controls">
           <label htmlFor="sort-select">Sort by:</label>
           <select
@@ -46,28 +45,17 @@ function EventListView({ events, allTags, filters, onFilterChange }) {
         </div>
       </div>
 
-      <div className="list-container">
-        <FilterPanel
-          filters={filters}
-          allTags={allTags}
-          onFilterChange={onFilterChange}
-        />
-
-        <div className="events-grid">
-          {sortedEvents.length > 0 ? (
-            sortedEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))
-          ) : (
-            <div className="no-events">
-              <p>No events match your filters.</p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="event-count">
-        Showing {sortedEvents.length} of {events.length} events
+      <div className="events-grid">
+        {sortedEvents.length > 0 ? (
+          sortedEvents.map((event) => (
+            <EventCard key={event.id} event={event} />
+          ))
+        ) : (
+          <div className="no-events">
+            <p>No events match your filters.</p>
+            <span>Try a broader search or clear the optional filters.</span>
+          </div>
+        )}
       </div>
     </div>
   )

@@ -24,16 +24,16 @@ function EventCard({ event }) {
     })
   }
 
-  const getLocationIcon = () => {
+  const getLocationLabel = () => {
     switch (event.locationType) {
       case 'online':
-        return '🌐'
+        return 'Online'
       case 'in_person':
-        return '📍'
+        return 'In person'
       case 'hybrid':
-        return '🔗'
+        return 'Hybrid'
       default:
-        return '📍'
+        return 'Location'
     }
   }
 
@@ -71,59 +71,46 @@ END:VCALENDAR`
 
   return (
     <div className={`event-card ${event.featured ? 'featured' : ''}`}>
-      {event.featured && <div className="featured-badge">⭐ Featured</div>}
+      {event.featured && <div className="featured-badge">Featured</div>}
 
-      <div className="event-header">
-        <h3 className="event-title">{event.title}</h3>
-      </div>
+      <h3 className="event-title">{event.title}</h3>
 
-      <div className="event-meta">
-        <div className="meta-item">
-          <span className="meta-label">Date</span>
-          <span className="meta-value">{formatDate(event.startDate)}</span>
+      <div className="event-core-info">
+        <div className="event-date">
+          {formatDate(event.startDate)}
+          {formatTime(event.startDate) && <span>{formatTime(event.startDate)}</span>}
         </div>
-        {event.endDate && event.startDate !== event.endDate && (
-          <div className="meta-item">
-            <span className="meta-label">Ends</span>
-            <span className="meta-value">{formatDate(event.endDate)}</span>
-          </div>
-        )}
-      </div>
-
-      <div className="event-time">
-        <span>⏰ {formatTime(event.startDate)}</span>
-      </div>
-
-      <div className="event-location">
-        <span>{getLocationIcon()} {event.locationText}</span>
+        <div className="event-location">
+          <span>{getLocationLabel()}</span>
+          {event.locationText}
+        </div>
       </div>
 
       {event.description && (
-        <div className="event-description">
-          {event.description.substring(0, 150)}
-          {event.description.length > 150 ? '...' : ''}
-        </div>
+        <p className="event-description">
+          {event.description.substring(0, 120)}
+          {event.description.length > 120 ? '…' : ''}
+        </p>
       )}
 
       {event.tags && event.tags.length > 0 && (
         <div className="event-tags">
-          {event.tags.map((tag) => (
-            <span key={tag} className="tag">
-              {tag}
-            </span>
+          {event.tags.slice(0, 3).map((tag) => (
+            <span key={tag} className="tag">{tag}</span>
           ))}
         </div>
       )}
 
-      {event.url && (
-        <a href={event.url} target="_blank" rel="noopener noreferrer" className="event-link">
-          View Event →
-        </a>
-      )}
-
-      <button onClick={addToCalendar} className="calendar-button">
-        📅
-      </button>
+      <div className="event-actions">
+        {event.url && (
+          <a href={event.url} target="_blank" rel="noopener noreferrer" className="event-link">
+            Learn more
+          </a>
+        )}
+        <button onClick={addToCalendar} className="calendar-button" title="Add to calendar">
+          Add to Calendar
+        </button>
+      </div>
     </div>
   )
 }

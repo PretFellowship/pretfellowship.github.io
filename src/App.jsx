@@ -3,7 +3,14 @@ import { useQuery } from '@tanstack/react-query'
 import EventListView from './views/EventListView'
 import CalendarView from './views/CalendarView'
 import MapView from './views/MapView'
+import FilterPanel from './components/FilterPanel'
 import './App.css'
+
+const views = [
+  { id: 'list', label: 'List' },
+  { id: 'calendar', label: 'Calendar' },
+  { id: 'map', label: 'Map' },
+]
 
 function App() {
   const [activeView, setActiveView] = useState('list')
@@ -37,7 +44,7 @@ function App() {
 
     // Tags filter
     if (filters.tags.length > 0) {
-      const hasTag = filters.tags.some(tag => event.tags.includes(tag))
+      const hasTag = filters.tags.some(tag => (event.tags || []).includes(tag))
       if (!hasTag) return false
     }
 
@@ -56,12 +63,17 @@ function App() {
       const matchesSearch =
         event.title.toLowerCase().includes(searchLower) ||
         (event.description && event.description.toLowerCase().includes(searchLower)) ||
-        event.tags.some(tag => tag.toLowerCase().includes(searchLower))
+        (event.locationText && event.locationText.toLowerCase().includes(searchLower)) ||
+        (event.tags || []).some(tag => tag.toLowerCase().includes(searchLower))
       if (!matchesSearch) return false
     }
 
     return true
   })
+
+  const allTags = Array.from(new Set(events.flatMap(e => e.tags || []))).sort()
+  const visibleMapEvents = filteredEvents.filter(e => e.latitude && e.longitude)
+  const activeViewLabel = views.find(view => view.id === activeView)?.label || 'Events'
 
   if (error) {
     return (
@@ -76,35 +88,31 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-content">
-          <h1>Full Preterist Events</h1>
-          <p className="subtitle">A collection of events "...that must soon take place"</p>
+          <div className="header-kicker">Pret Fellowship Event Hub</div>
+          <h1>Discover full preterist events with less noise.</h1>
+          <p className="subtitle">A calm, scannable guide to gatherings, studies, conferences, and online meetups.</p>
         </div>
       </header>
 
-      <nav className="view-switcher">
-        <button
-          className={`view-btn ${activeView === 'list' ? 'active' : ''}`}
-          onClick={() => setActiveView('list')}
-        >
-          📋 List View
-        </button>
-        <button
-          className={`view-btn ${activeView === 'calendar' ? 'active' : ''}`}
-          onClick={() => setActiveView('calendar')}
-        >
-          📅 Calendar
-        </button>
-        <button
-          className={`view-btn ${activeView === 'map' ? 'active' : ''}`}
-          onClick={() => setActiveView('map')}
-        >
-          🗺️ Map
-        </button>
+      <nav className="view-switcher" aria-label="Event views">
+        <div className="view-tabs" role="tablist" aria-label="Choose event view">
+          {views.map((view) => (
+            <button
+              key={view.id}
+              role="tab"
+              aria-selected={activeView === view.id}
+              className={`view-btn ${activeView === view.id ? 'active' : ''}`}
+              onClick={() => setActiveView(view.id)}
+            >
+              {view.label}
+            </button>
+          ))}
+        </div>
         <button 
           className="suggest-btn" 
           onClick={() => window.open('https://github.com/PretFellowship/pretfellowship.github.io/issues', '_blank')}
         >
-          ✉️ Suggest Event
+          Suggest Event
         </button>
       </nav>
 
@@ -112,28 +120,41 @@ function App() {
         {isLoading ? (
           <div className="loading">Loading events...</div>
         ) : (
-          <>
+          <section className="event-hub" aria-label={`${activeViewLabel} event view`}>
+            <div className="hub-toolbar">
+              <div>
+                <p className="eyebrow">{activeViewLabel} view</p>
+                <h2>Events</h2>
+              </div>
+              <p className="event-count">
+                {filteredEvents.length} of {events.length} events
+              </p>
+            </div>
+
+            <FilterPanel
+              filters={filters}
+              allTags={allTags}
+              onFilterChange={handleFilterChange}
+            />
+
             {activeView === 'list' && (
               <EventListView
                 events={filteredEvents}
-                allTags={Array.from(new Set(events.flatMap(e => e.tags)))}
-                filters={filters}
-                onFilterChange={handleFilterChange}
               />
             )}
             {activeView === 'calendar' && (
               <CalendarView events={filteredEvents} />
             )}
             {activeView === 'map' && (
-              <MapView events={filteredEvents.filter(e => e.latitude && e.longitude)} />
+              <MapView events={visibleMapEvents} />
             )}
-          </>
+          </section>
         )}
       </main>
 
       <footer className="app-footer">
         <p>
-          Events for the Full Preterist Community | 
+          Events for the Full Preterist community | 
           <a href="https://github.com/pretfellowship/pretfellowship.github.io" target="_blank" rel="noopener noreferrer">
             {' '}View on GitHub
           </a>

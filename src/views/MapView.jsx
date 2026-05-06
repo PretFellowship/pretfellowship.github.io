@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
+import EventCard from '../components/EventCard'
 import './MapView.css'
 
 // Fix default marker icons for Leaflet
@@ -27,30 +28,37 @@ function MapView({ events }) {
 
   return (
     <div className="map-view">
-      <MapContainer center={[centerLat, centerLng]} zoom={6} className="map-container">
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
+      <div className="map-panel">
+        <MapContainer center={[centerLat, centerLng]} zoom={6} className="map-container">
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          />
+          {events.map((event) => (
+            <Marker key={event.id} position={[event.latitude, event.longitude]}>
+              <Popup>
+                <div className="popup-content">
+                  <h4>{event.title}</h4>
+                  <p>{event.locationText}</p>
+                  <p className="popup-date">
+                    {event.startDate ? new Date(event.startDate).toLocaleDateString() : 'No date'}
+                  </p>
+                  {event.url && (
+                    <a href={event.url} target="_blank" rel="noopener noreferrer">
+                      Learn more
+                    </a>
+                  )}
+                </div>
+              </Popup>
+            </Marker>
+          ))}
+        </MapContainer>
+      </div>
+      <aside className="map-events" aria-label="Mapped events">
         {events.map((event) => (
-          <Marker key={event.id} position={[event.latitude, event.longitude]}>
-            <Popup>
-              <div className="popup-content">
-                <h4>{event.title}</h4>
-                <p>{event.locationText}</p>
-                <p className="event-date">
-                  {event.startDate ? new Date(event.startDate).toLocaleDateString() : 'No date'}
-                </p>
-                {event.url && (
-                  <a href={event.url} target="_blank" rel="noopener noreferrer">
-                    View Event
-                  </a>
-                )}
-              </div>
-            </Popup>
-          </Marker>
+          <EventCard key={event.id} event={event} />
         ))}
-      </MapContainer>
+      </aside>
     </div>
   )
 }

@@ -2,19 +2,7 @@ import { useState } from 'react'
 import './FilterPanel.css'
 
 function FilterPanel({ filters, allTags, onFilterChange }) {
-  const [expandedFilters, setExpandedFilters] = useState({
-    locationType: false,
-    dateRange: false,
-    tags: false,
-    search: false,
-  })
-
-  const toggleFilter = (filterName) => {
-    setExpandedFilters(prev => ({
-      ...prev,
-      [filterName]: !prev[filterName],
-    }))
-  }
+  const [showAdvanced, setShowAdvanced] = useState(false)
 
   const handleLocationChange = (locationType) => {
     onFilterChange({ locationType })
@@ -31,12 +19,6 @@ function FilterPanel({ filters, allTags, onFilterChange }) {
     onFilterChange({ searchText: e.target.value })
   }
 
-  const handleDateChange = (type, value) => {
-    onFilterChange({
-      [type]: value || null,
-    })
-  }
-
   const handleReset = () => {
     onFilterChange({
       locationType: 'all',
@@ -47,50 +29,41 @@ function FilterPanel({ filters, allTags, onFilterChange }) {
     })
   }
 
+  const hasActiveFilters = filters.tags.length > 0 || filters.locationType !== 'all' || filters.searchText
+  const activeFilterCount = filters.tags.length + (filters.locationType !== 'all' ? 1 : 0)
+
   return (
     <div className="filter-panel">
-      <div className="filter-header">
-        <h3>Filters</h3>
-        {(filters.tags.length > 0 || filters.locationType !== 'all' || filters.searchText) && (
-          <button className="reset-btn" onClick={handleReset} title="Reset all filters">
-            ↻ Reset
+      <div className="search-container">
+        <span className="search-mark" aria-hidden="true">Search</span>
+        <input
+          type="text"
+          placeholder="Search titles, descriptions, or tags"
+          value={filters.searchText}
+          onChange={handleSearch}
+          className="search-input"
+        />
+      </div>
+
+      <div className="filter-actions">
+        <button 
+          className="advanced-toggle"
+          onClick={() => setShowAdvanced(!showAdvanced)}
+          aria-expanded={showAdvanced}
+        >
+          {showAdvanced ? 'Hide filters' : `Filters${activeFilterCount ? ` (${activeFilterCount})` : ''}`}
+        </button>
+        {hasActiveFilters && (
+          <button className="reset-btn" onClick={handleReset}>
+            Clear
           </button>
         )}
       </div>
 
-      {/* Search */}
-      <div className="filter-group">
-        <button
-          className="filter-title"
-          onClick={() => toggleFilter('search')}
-        >
-          🔍 Search
-          <span className="toggle-icon">{expandedFilters.search ? '▼' : '▶'}</span>
-        </button>
-        {expandedFilters.search && (
-          <div className="filter-content">
-            <input
-              type="text"
-              placeholder="Search events..."
-              value={filters.searchText}
-              onChange={handleSearch}
-              className="search-input"
-            />
-          </div>
-        )}
-      </div>
-
-      {/* Location Type */}
-      <div className="filter-group">
-        <button
-          className="filter-title"
-          onClick={() => toggleFilter('locationType')}
-        >
-          📍 Location Type
-          <span className="toggle-icon">{expandedFilters.locationType ? '▼' : '▶'}</span>
-        </button>
-        {expandedFilters.locationType && (
-          <div className="filter-content">
+      {showAdvanced && (
+        <div className="advanced-filters">
+          <fieldset className="filter-group">
+            <legend>Location Type</legend>
             <label className="filter-option">
               <input
                 type="radio"
@@ -109,7 +82,7 @@ function FilterPanel({ filters, allTags, onFilterChange }) {
                 checked={filters.locationType === 'online'}
                 onChange={(e) => handleLocationChange(e.target.value)}
               />
-              🌐 Online
+              Online
             </label>
             <label className="filter-option">
               <input
@@ -119,7 +92,7 @@ function FilterPanel({ filters, allTags, onFilterChange }) {
                 checked={filters.locationType === 'in_person'}
                 onChange={(e) => handleLocationChange(e.target.value)}
               />
-              📍 In Person
+              In Person
             </label>
             <label className="filter-option">
               <input
@@ -129,69 +102,30 @@ function FilterPanel({ filters, allTags, onFilterChange }) {
                 checked={filters.locationType === 'hybrid'}
                 onChange={(e) => handleLocationChange(e.target.value)}
               />
-              🔗 Hybrid
+              Hybrid
             </label>
-          </div>
-        )}
-      </div>
+          </fieldset>
 
-      {/* Tags */}
-      {allTags.length > 0 && (
-        <div className="filter-group">
-          <button
-            className="filter-title"
-            onClick={() => toggleFilter('tags')}
-          >
-            🏷️ Tags ({filters.tags.length})
-            <span className="toggle-icon">{expandedFilters.tags ? '▼' : '▶'}</span>
-          </button>
-          {expandedFilters.tags && (
-            <div className="filter-content">
-              {allTags.map((tag) => (
-                <label key={tag} className="filter-option">
-                  <input
-                    type="checkbox"
-                    checked={filters.tags.includes(tag)}
-                    onChange={() => handleTagToggle(tag)}
-                  />
-                  {tag}
-                </label>
-              ))}
-            </div>
+          {allTags.length > 0 && (
+            <fieldset className="filter-group">
+              <legend>Tags</legend>
+              <div className="tags-list">
+                {allTags.map((tag) => (
+                  <label key={tag} className="filter-option">
+                    <input
+                      type="checkbox"
+                      checked={filters.tags.includes(tag)}
+                      onChange={() => handleTagToggle(tag)}
+                    />
+                    {tag}
+                  </label>
+                ))}
+              </div>
+            </fieldset>
           )}
+
         </div>
       )}
-
-      {/* Date Range */}
-      <div className="filter-group">
-        <button
-          className="filter-title"
-          onClick={() => toggleFilter('dateRange')}
-        >
-          📅 Date Range
-          <span className="toggle-icon">{expandedFilters.dateRange ? '▼' : '▶'}</span>
-        </button>
-        {expandedFilters.dateRange && (
-          <div className="filter-content">
-            <label className="filter-label">
-              From:
-              <input
-                type="date"
-                value={filters.startDate || ''}
-                onChange={(e) => handleDateChange('startDate', e.target.value)}
-              />
-            </label>
-            <label className="filter-label">
-              To:
-              <input
-                type="date"
-                value={filters.endDate || ''}
-                onChange={(e) => handleDateChange('endDate', e.target.value)}
-              />
-            </label>
-          </div>
-        )}
-      </div>
     </div>
   )
 }
