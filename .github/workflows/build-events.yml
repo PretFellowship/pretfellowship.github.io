@@ -35,7 +35,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add dist/submitted.json
+          git add data/submitted.json
 
           git commit -m "Update submitted.json from issues" || echo "No changes"
 
