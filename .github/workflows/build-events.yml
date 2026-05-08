@@ -39,4 +39,5 @@ jobs:
 
           git commit -m "Update submitted.json from issues" || echo "No changes"
 
+          git pull --rebase origin main || echo "No remote changes to pull"
           git push
