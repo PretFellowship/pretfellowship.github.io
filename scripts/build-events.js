@@ -25,9 +25,28 @@ function hasLabel(issue, labelName) {
   return issue.labels?.some((l) => l.name === labelName);
 }
 
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function getField(body, label) {
-  const match = body.match(new RegExp(`### ${label}\\s+([^#]+)`));
-  return match ? match[1].trim() : null;
+  const escapedLabel = escapeRegExp(label);
+  const headingRegex = new RegExp(
+    `^#{2,6}\\s*${escapedLabel}\\s*$([\\s\\S]*?)(?=^#{2,6}\\s|$)`,
+    'm'
+  );
+
+  const headingMatch = body.match(headingRegex);
+  if (headingMatch) {
+    return headingMatch[1].trim();
+  }
+
+  const colonRegex = new RegExp(
+    `^${escapedLabel}:\\s*([\\s\\S]*?)(?=^\\w.*?:\\s|$)`,
+    'm'
+  );
+  const colonMatch = body.match(colonRegex);
+  return colonMatch ? colonMatch[1].trim() : null;
 }
 
 function parseIssue(issue) {
