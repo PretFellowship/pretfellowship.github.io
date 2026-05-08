@@ -170,9 +170,9 @@ async function main() {
   };
 
   fs.mkdirSync("dist", { recursive: true });
-  fs.writeFileSync("dist/events.json", JSON.stringify(output, null, 2));
+  fs.writeFileSync("dist/submitted.json", JSON.stringify(output, null, 2));
 
-  console.log(`Built events.json with ${events.length} valid approved events`);
+  console.log(`Built submitted.json with ${events.length} valid approved events`);
 }
 
 main().catch((err) => {
