@@ -1,0 +1,386 @@
+[
+  {
+    "id": "blue-point-wednesday-bible-study",
+    "title": "Blue Point Bible Church Wednesday Night Bible Study",
+    "description": "Weekly in-person and online Bible study/praise/prayer with strong full preterist focus. Pastor Mike Miano often features or discusses teachings aligned with preterist leaders like Don Preston and others.",
+    "startDate": "2026-05-06T23:00:00Z",
+    "endDate": "2026-05-06T00:30:00Z",
+    "recurrence": "weekly_wednesday",
+    "locationType": "hybrid",
+    "locationText": "Blue Point, New York / Online",
+    "latitude": 40.757,
+    "longitude": -73.034,
+    "url": "https://www.bluepointbiblechurch.org/",
+    "tags": [
+      "Bible Study",
+      "Weekly",
+      "Hybrid",
+      "Full Preterism",
+      "Mike Miano"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "st-louis-gateway-prophets-2026",
+    "title": "Eschatology of the Prophets – Gateway to Fulfillment Conference",
+    "description": "Annual multi-day conference on fulfilled eschatology and prophetic interpretation, featuring speakers like Steve Magua, Tim Martin, Michael Miano, Zach Davis, Don K. Preston, and William Bell Jr. All-inclusive options with lodging/meals at retreat center. Strong full preterist alignment.",
+    "startDate": "2026-07-08T14:00:00Z",
+    "endDate": "2026-07-11T13:00:00Z",
+    "locationType": "in_person",
+    "locationText": "Toddhall Retreat and Conference Center, Columbia, IL (near St. Louis, MO)",
+    "latitude": 38.4431,
+    "longitude": -90.2,
+    "url": "https://www.thewellchurchstl.com/events/conference2026",
+    "tags": [
+      "Conference",
+      "Full Preterism",
+      "Prophecy",
+      "Fulfilled Eschatology"
+    ],
+    "featured": true,
+    "createdAt": "2025-09-01T00:00:00Z"
+  },
+  {
+    "id": "berean-spring-conference-2026",
+    "title": "Berean Bible Church Spring Bible Conference 2026: How Shall We Then Live?",
+    "description": "Annual preterist-focused Bible conference with speakers including David Curtis, Michael Sullivan, and Gary DeMar. Explores implications of preterism for Christian living. Held in Chesapeake, VA area.",
+    "startDate": "2026-05-01T00:00:00Z",
+    "endDate": "2026-05-03T23:59:00Z",
+    "locationType": "in_person",
+    "locationText": "Chesapeake, Virginia (Wingate by Wyndham area)",
+    "latitude": 36.7682,
+    "longitude": -76.2875,
+    "url": "https://www.bereanbiblechurch.org/conference/index.php",
+    "tags": [
+      "Conference",
+      "Preterism",
+      "Bible Study",
+      "Fulfilled Eschatology"
+    ],
+    "featured": false,
+    "createdAt": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "johnson-city-revelation-conference-2025",
+    "title": "Revelation Conference at East Tennessee State University (Gracereach)",
+    "description": "Full preterist conference hosted by Brad Robertson/Grace Reach focusing on Revelation and fulfilled prophecy. Held on university campus.",
+    "startDate": "2025-10-23T18:00:00Z",
+    "endDate": "2025-10-24T12:00:00Z",
+    "locationType": "in_person",
+    "locationText": "East Tennessee State University, Johnson City, Tennessee",
+    "latitude": 36.3134,
+    "longitude": -82.3535,
+    "url": "https://www.gracereach.org/",
+    "tags": [
+      "Conference",
+      "Full Preterism",
+      "Revelation",
+      "Local"
+    ],
+    "featured": false,
+    "createdAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": "south-haven-michigan-preterist-2025",
+    "title": "Bible Prophecy / Preterist Conference - South Haven, Michigan",
+    "description": "Preterist conference addressing objections to the preterist view. Speakers include Don K. Preston and others. Hosted at Church of Christ at Lakeshore.",
+    "startDate": "2025-08-01T00:00:00Z",
+    "endDate": "2025-08-03T23:59:00Z",
+    "locationType": "in_person",
+    "locationText": "South Haven, Michigan",
+    "latitude": 42.3731,
+    "longitude": -86.2736,
+    "url": "https://donkpreston.com/preterist-conference-in-michigan-coming-soon/",
+    "tags": [
+      "Conference",
+      "Preterism",
+      "Objections",
+      "Midwest"
+    ],
+    "featured": false,
+    "createdAt": "2025-07-01T00:00:00Z"
+  },
+  {
+    "id": "montana-wild-eschatology-2025",
+    "title": "Montana Wild Conference: The Eschatology of Genesis",
+    "description": "Fulfilled eschatology conference with review sessions and ties to broader preterist thought. Featured speakers like Steve Magua and Tim Martin.",
+    "startDate": "2025-07-22T00:00:00Z",
+    "endDate": "2025-07-25T23:59:00Z",
+    "locationType": "in_person",
+    "locationText": "Whitehall, Montana (Copper K Barn area)",
+    "latitude": 45.638,
+    "longitude": -112.1,
+    "url": "https://beyondcreationscience.com/2025_Montana_Live.php",
+    "tags": [
+      "Conference",
+      "Preterism",
+      "Genesis",
+      "Fulfilled Eschatology"
+    ],
+    "featured": false,
+    "createdAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": "niagara-falls-preterist-2017",
+    "title": "International Preterist Association Conference - Niagara Falls",
+    "description": "Full preterist conference hosted by IPA/Ed Stevens focusing on past fulfillment. Part of a series of annual events/picnics turned conferences.",
+    "startDate": "2017-07-01T00:00:00Z",
+    "endDate": "2017-07-31T23:59:00Z",
+    "locationType": "in_person",
+    "locationText": "Niagara Falls, New York",
+    "latitude": 43.0962,
+    "longitude": -79.0377,
+    "url": "https://www.preterist.org/",
+    "tags": [
+      "Conference",
+      "Full Preterism",
+      "Historical"
+    ],
+    "featured": false,
+    "createdAt": "2017-01-01T00:00:00Z"
+  },
+  {
+    "id": "philadelphia-preterist-seminar-2019",
+    "title": "Philadelphia Prophecy Seminar: What Happened in A.D. 70?",
+    "description": "Introductory full preterist seminar by Ed Stevens and others on AD 70 fulfillment. Hosted by local preterist group.",
+    "startDate": "2019-09-21T00:00:00Z",
+    "endDate": "2019-09-21T23:59:00Z",
+    "locationType": "in_person",
+    "locationText": "Philadelphia, Pennsylvania",
+    "latitude": 39.9526,
+    "longitude": -75.1652,
+    "url": "https://www.preterist.org/",
+    "tags": [
+      "Seminar",
+      "Full Preterism",
+      "Introductory",
+      "Historical"
+    ],
+    "featured": false,
+    "createdAt": "2019-01-01T00:00:00Z"
+  },
+  {
+    "id": "baltimore-preterist-seminar-2018",
+    "title": "Baltimore Area Introductory Preterist Seminar",
+    "description": "Ed Stevens presentation on Christ's promised return and AD 70 events as introduction to full preterism.",
+    "startDate": "2018-05-12T00:00:00Z",
+    "endDate": "2018-05-12T23:59:00Z",
+    "locationType": "in_person",
+    "locationText": "Bel Air, Maryland (Baltimore area)",
+    "latitude": 39.5359,
+    "longitude": -76.3483,
+    "url": "https://www.preterist.org/",
+    "tags": [
+      "Seminar",
+      "Full Preterism",
+      "Historical"
+    ],
+    "featured": false,
+    "createdAt": "2018-01-01T00:00:00Z"
+  },
+  {
+    "id": "zach-davis-patreon-lives",
+    "title": "Zach Davis Patreon Live Sessions",
+    "description": "Recurring live streams and member Q&A on Patreon covering preterist theology, often with guests like Tim Martin. Public YouTube videos supplement with introductions to preterism and responses to common objections.",
+    "startDate": "2026-05-10T00:00:00Z",
+    "endDate": "2026-05-10T02:00:00Z",
+    "recurrence": "irregular_patreon_sundays",
+    "locationType": "online",
+    "locationText": "Online via Patreon/YouTube",
+    "url": "https://www.patreon.com/cw/ZachDavis",
+    "tags": [
+      "Live Stream",
+      "Patreon",
+      "YouTube",
+      "Preterism Intro",
+      "Zach Davis",
+      "Tim Martin"
+    ],
+    "featured": true,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "all-things-fulfilled-william-bell",
+    "title": "All Things Fulfilled with William Bell",
+    "description": "Weekly (or near-weekly) teachings and broadcasts on fulfilled Bible prophecy, resurrection, and covenant themes. Classic radio-style program now primarily on YouTube with deep dives into preterist eschatology.",
+    "startDate": null,
+    "endDate": null,
+    "releaseDate": null,
+    "recurrence": "ongoing_weekly",
+    "locationType": "online",
+    "locationText": "YouTube / AllThingsFulfilled.com",
+    "url": "https://www.youtube.com/allthingsfulfilled",
+    "tags": [
+      "Podcast",
+      "Weekly",
+      "Fulfilled Prophecy",
+      "William Bell",
+      "Full Preterism"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "burros-of-berea-rick-welch",
+    "title": "The Burros of Berea Podcast",
+    "description": "Conversational podcast hosted by Rick Welch with frequent full preterist guests (David Curtis, Bob Cruickshank, Mike Sullivan, Gary DeMar, etc.). Roundtables on preterist worldview, society, and eschatology.",
+    "startDate": null,
+    "endDate": null,
+    "releaseDate": "2021-01-01T00:00:00Z",
+    "recurrence": "ongoing_episodic",
+    "locationType": "online",
+    "locationText": "Apple Podcasts / RSS.com / YouTube",
+    "url": "https://podcasts.apple.com/us/podcast/the-burros-of-berea-podcast/id1588605731",
+    "tags": [
+      "Podcast",
+      "Conversational",
+      "Roundtable",
+      "Rick Welch",
+      "Full Preterism"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "preterist-power-hour",
+    "title": "Preterist Power Hour",
+    "description": "Recurring discussions and interviews hosted under the Power of Preterism Network featuring Rick Welch, Michael Miano, Zach Davis, and others. Covers advancing preterist theology and responses to critics.",
+    "startDate": null,
+    "endDate": null,
+    "releaseDate": null,
+    "recurrence": "periodic",
+    "locationType": "online",
+    "locationText": "YouTube",
+    "url": "https: //www.youtube.com/@thepowerofpreterismnetwork6385",
+    "tags": [
+      "Podcast",
+      "Discussions",
+      "Rick Welch",
+      "Michael Miano",
+      "Zach Davis"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "don-preston-morning-musings",
+    "title": "Morning Musings with Don K. Preston",
+    "description": "Regular YouTube video series / musings responding to critics, teaching on Revelation, and preterist topics. Often functions as a live or recorded podcast-style format.",
+    "startDate": null,
+    "endDate": null,
+    "releaseDate": null,
+    "recurrence": "ongoing",
+    "locationType": "online",
+    "locationText": "YouTube (MrDonPreston)",
+    "url": "https://www.youtube.com/channel/UCCMCzZrSxKb9GRwWFW3i0kA",
+    "tags": [
+      "Video Podcast",
+      "Responses",
+      "Don Preston",
+      "Full Preterism"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "zach-davis-preterism-content",
+    "title": "Zach Davis Preterism Teachings & Patreon",
+    "description": "YouTube videos, introductions to preterism, and exclusive Patreon live sessions/discussions (often with Tim Martin). Strong educational focus on fulfilled eschatology.",
+    "startDate": null,
+    "endDate": null,
+    "releaseDate": null,
+    "recurrence": "ongoing_irregular",
+    "locationType": "online",
+    "locationText": "YouTube / Patreon",
+    "url": "https://www.youtube.com/@zachdavis3882",
+    "tags": [
+      "YouTube Series",
+      "Patreon Lives",
+      "Zach Davis",
+      "Tim Martin"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "gary-demar-american-vision",
+    "title": "The Gary DeMar Podcast / Bible Prophecy Under the Microscope",
+    "description": "Ongoing podcast and video content from American Vision addressing preterism, partial-to-full views, and prophecy. Includes responses to futurist critiques.",
+    "startDate": null,
+    "endDate": null,
+    "releaseDate": null,
+    "recurrence": "ongoing",
+    "locationType": "online",
+    "locationText": "AmericanVision.org / YouTube",
+    "url": "https://garydemar.libsyn.com/",
+    "tags": [
+      "Podcast",
+      "Eschatology",
+      "Gary DeMar"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "mike-sullivan-fullpreterism",
+    "title": "Mike Sullivan Full Preterist Discussions",
+    "description": "Appearances on podcasts (Burros of Berea, debates) and content from fullpreterism.com focusing on consistent preterism, Armageddon, and House Divided themes.",
+    "startDate": null,
+    "endDate": null,
+    "releaseDate": null,
+    "recurrence": "guest_episodes",
+    "locationType": "online",
+    "locationText": "Various platforms",
+    "url": "https://fullpreterism.com/",
+    "tags": [
+      "Discussions",
+      "Debates",
+      "Mike Sullivan"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "tim-martin-covenant-creation",
+    "title": "Covenant Creation Conversations with Tim Martin",
+    "description": "Interviews and sessions linking Genesis to fulfilled eschatology. Featured in conferences and collaborative podcasts.",
+    "startDate": null,
+    "endDate": null,
+    "releaseDate": null,
+    "recurrence": "irregular",
+    "locationType": "online",
+    "locationText": "YouTube / Beyond Creation Science",
+    "url": "https: //www.youtube.com/channel/UCsGJCi5TP3EEd6jUbrJCdJA",
+    "tags": [
+      "Discussions",
+      "Covenant Creation",
+      "Tim Martin"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "berean-sunday-worship-study",
+    "title": "Berean Bible Church Sunday Services & Studies",
+    "description": "Ongoing full preterist teachings by David Curtis and guests (including past appearances by William Bell, Bob Cruikshank, Rick Welch). Annual Spring Conference and archived sermon series on fulfilled eschatology.",
+    "startDate": "2026-05-03T15:00:00Z",
+    "endDate": "2026-05-03T17:00:00Z",
+    "recurrence": "weekly_sunday",
+    "locationType": "hybrid",
+    "locationText": "Chesapeake, Virginia / Online",
+    "latitude": 36.7682,
+    "longitude": -76.2875,
+    "url": "https://www.bereanbiblechurch.org/",
+    "tags": [
+      "Sunday Service",
+      "Bible Study",
+      "Conference",
+      "David Curtis",
+      "William Bell",
+      "Bob Cruikshank"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  }
+]
